@@ -1,0 +1,43 @@
+public class Outlook Mail{
+   public static void main(String[] args) {
+  System.setProperty("webdriver.gecko.driver","path of outlook exe file");
+     	WebDriver driver = new FirefoxDriver();
+        	driver.get("https://outlook.accenture.com");
+        	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	//Scenario 1 function 	
+	CreateNewmail();
+	//Scenario 2 function
+	CreateEvent();
+	//Scenario 3 function
+	addContact();
+//close the Firefox browser.
+     	driver.close();    
+}}
+//Scenario 1:
+Public Function CreateNewmail(){
+try {
+	//click on mail icon at the bottom
+     	 driver.findElement(By.name(“email”)).click();
+	//click on + button at top right
+     	 driver.findElement(By.name(“new mail”)).click();
+}Catch(NoSuchElementException n){}  }	
+//Scenario 2:
+Public Function CreateEvent(){
+try{
+	//click on mail icon at the bottom
+     	 driver.findElement(By.name(“calendar icon”)).click();
+	//click on + button at top right
+     	 driver.findElement(By.name(“add calendar button”)).click();
+}Catch(NoSuchElementException n){}  
+} 
+//Scanario 3:
+Public Function addContact(){
+try {
+	//click on mail icon at the bottom
+     	 driver.findElement(By.name(“people icon”)).click();
+	//click on + button at top right
+     	 driver.findElement(By.name(“add people”)).click();
+}Catch(NoSuchElementException n){}  }	
+}
+
+
