@@ -12,7 +12,7 @@ public static void main(String[] args)
     dataRow.createCell(1).setCellValue(4.5);
     
     try{
-        FileOutputStream out =  new FileOutputStream("formulaDemo.xlsx");
+        FileOutputStream out =  new FileOutputStream("DemoExcelFile.xlsx");
         WB.write(out);
         out.close();       
         } 
